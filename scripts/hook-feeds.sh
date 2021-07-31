@@ -21,6 +21,9 @@ svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/application
 # Add tmate
 git clone --depth=1 https://github.com/immortalwrt/openwrt-tmate
 
+# Add luci-app-advanced
+git clone --depth=1 https://github.com/sirpdboy/luci-app-advanced
+
 # Add luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall luci/applications/openwrt-passwall
 
