@@ -27,6 +27,16 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-advanced
 # Add luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall luci/applications/openwrt-passwall
 
+# Add luci-theme-infinityfreedom
+git clone --depth=1 -https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
+
+# Add luci-theme-netgear
+git clone --depth=1 -https://github.com/i028/luci-theme-netgear
+rm -rf ../lean/luci-theme-netgear
+
+# Add luci-theme-rosy
+git clone --depth=1 -https://github.com/main-jin-ting/luci-theme-rosy
+
 # Add gotop
 svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/admin/gotop packages/admin/gotop
 
