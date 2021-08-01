@@ -143,6 +143,8 @@ jobs:
         cp ../scripts/init-settings.sh files/etc/uci-defaults/99-init-settings
         mkdir -p files/etc/opkg
         cp ../configs/opkg/distfeeds-packages-server.conf files/etc/opkg/distfeeds.conf.server
+        mkdir -p files/etc/opkg/keys
+        cp ../configs/opkg/1035ac73cc4e59e3 files/etc/opkg/keys/1035ac73cc4e59e3
         if "$KMODS_IN_FIRMWARE" = 'true'
         then
             mkdir -p files/www/snapshots
@@ -237,7 +239,7 @@ jobs:
         id: tag
         if: env.UPLOAD_RELEASE == 'true' && !cancelled()
         run: |
-          echo "::set-output name=release_tag::$(date +"%Y.%m.%d")-Lean3"
+          echo "::set-output name=release_tag::$(date +"%Y.%m.%d")-Lean"
           echo "::set-output name=release_date::$(date +"%Y.%m.%d")"
           touch release.txt
           [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
@@ -249,7 +251,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: ${{ steps.tag.outputs.release_date }} NanoPi R2S FusionWrt_稳定精简
+          name: ${{ steps.tag.outputs.release_date }} NanoPi R2S FusionWrt_稳定
           tag_name: ${{ steps.tag.outputs.release_tag }}
           body_path: release.txt
           files: ${{ env.FIRMWARE }}/*
