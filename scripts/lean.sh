@@ -16,7 +16,13 @@ git clone --depth=1 https://github.com/Lienol/openwrt-package
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
 # Add luci-app-bypass
-# git clone https://github.com/garypang13/luci-app-bypass.git
+git clone --depth=1 https://github.com/kiddin9/openwrt-bypass
+
+# Add luci-app-advanced
+git clone --depth=1 https://github.com/sirpdboy/luci-app-advanced
+
+# Add luci-app-godproxy
+git clone --depth=1 https://github.com/project-lede/luci-app-godproxy
 
 # Add luci-app-vssr <M>
 git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
@@ -58,6 +64,16 @@ git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 rm -rf ../lean/luci-theme-argon
+
+# Add luci-theme-infinityfreedom
+git clone --depth=1 -https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
+
+# Add luci-theme-netgear
+git clone --depth=1 -https://github.com/i028/luci-theme-netgear
+rm -rf ../lean/luci-theme-netgear
+
+# Add luci-theme-rosy
+git clone --depth=1 -https://github.com/main-jin-ting/luci-theme-rosy
 
 # Add subconverter
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
