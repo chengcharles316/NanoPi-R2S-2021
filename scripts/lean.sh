@@ -66,14 +66,14 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 rm -rf ../lean/luci-theme-argon
 
 # Add luci-theme-infinityfreedom
-git clone --depth=1 -https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
+git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 
 # Add luci-theme-netgear
-git clone --depth=1 -https://github.com/i028/luci-theme-netgear
+git clone --depth=1 https://github.com/i028/luci-theme-netgear
 rm -rf ../lean/luci-theme-netgear
 
 # Add luci-theme-rosy
-git clone --depth=1 -https://github.com/main-jin-ting/luci-theme-rosy
+git clone --depth=1 https://github.com/main-jin-ting/luci-theme-rosy
 
 # Add subconverter
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
