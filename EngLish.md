@@ -8,7 +8,7 @@ This month I have been begging without a computer (please be in the computer~). 
 
 - Username: root Password: password Management IP: 192.168.2.1
 
-- Download link, you can choose the stable or beta version(thanks for xenstar's suggestion): https://github.com/DHDAXCW/NanoPi-R2S-2021/releases
+- Download link, you can choose the stable or beta version(thanks for xenstar's suggestion): https://github.com/chengcharles316/OPFusionWrt-nanopir2s/releases
 
 ### If you think this project is helpful to you, you can donate to us to encourage the sustainable development and perfection of the project
 # Plug-in display
