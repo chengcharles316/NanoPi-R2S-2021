@@ -2,10 +2,10 @@ name: NanoPi R2S stable FusionWRT
 on:
   repository_dispatch:
   workflow_dispatch:
-  #schedule:
-    #- cron: 0 16 * * *
-  watch:
-     types: started
+ #schedule:
+   #- cron: 0 16 * * *
+ #watch:
+   #types: started
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
