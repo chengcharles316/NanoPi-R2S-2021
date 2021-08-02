@@ -1,4 +1,4 @@
-# English | [中文简体](https://github.com/DHDAXCW/NanoPi-R2S-2021/blob/main/README.md)
+# English | [中文简体](https://github.com/chengcharles316/OPFusionWrt-nanopir2s/blob/main/README.md)
 # NanoPi-R2S-2021 The plug-in and kernel version are automatically updated every day.
 ## ``` Since the source code could not be taken out of the hard disk, I had to do it again. , At present, only 70% of the reconstruction progress is used on the closed source of this mirror. Try to deal with it later. The following things have been updated this month.
 ## Samsung TF card\Haikang TF card is strongly recommended. Even if the firmware is difficult to flash, only Samsung flashes it to boot.
@@ -9,10 +9,7 @@ This month I have been begging without a computer (please be in the computer~). 
 - Username: root Password: password Management IP: 192.168.2.1
 
 - Download link, you can choose the stable or beta version(thanks for xenstar's suggestion): https://github.com/DHDAXCW/NanoPi-R2S-2021/releases
-- Telegram chat group: https://t.me/DHDAXCW
-- Telegram Channel: https://t.me/FWR2SR4S
-# Enjoy a chicken drumstick
- ![Alt ​​text](data/2.jpg?raw=true "Title")
+
 ### If you think this project is helpful to you, you can donate to us to encourage the sustainable development and perfection of the project
 # Plug-in display
  ![Alt ​​text](data/20.jpg?raw=true "Title")
