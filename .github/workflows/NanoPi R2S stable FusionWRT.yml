@@ -52,10 +52,11 @@ jobs:
         git config --global user.name "GitHub"
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
-        # chmod +x ../patches/lean/*
-        # cp ../patches/lean/108-rk3328-opp-added-new-cpu-freq-1.6Ghz.patch target/linux/rockchip/patches-5.4
-        rm -rf ./package/kernel/mac80211
-        svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/kernel/mac80211 package/kernel/mac80211
+      # chmod +x ../patches/lean/*
+      # cp ../patches/lean/108-rk3328-opp-added-new-cpu-freq-1.6Ghz.patch target/linux/rockchip/patches-5.4
+      # rm -rf ./package/kernel/mac80211
+      # svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/kernel/mac80211 package/kernel/mac80211
+
     - name: Update Feeds
       id: update
       run: |
@@ -67,10 +68,12 @@ jobs:
         git clone --depth=1 https://github.com/coolsnowwolf/luci customfeeds/luci
         chmod +x ../scripts/*.sh
         ../scripts/hook-feeds.sh
-  # - name: MOD index file
+
+ # - name: MOD index file
     # run: |
       # cd $OPENWRTROOT/package/lean/autocore/files/arm
       # sed -i '/Load Average/i\\t\t<tr><td width="33%"><%:Telegram %></td><td><a href="https://t.me/DHDAXCW"><%:电报交流群%></a></td></tr>' index.htm
+
     - name: Install Feeds
       run: |
         cd $OPENWRTROOT
