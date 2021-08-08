@@ -63,8 +63,9 @@ jobs:
         git config --global user.name "GitHub"
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
-        rm -rf ./package/kernel/mac80211
-        svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/kernel/mac80211 package/kernel/mac80211
+      # rm -rf ./package/kernel/mac80211
+      # svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/kernel/mac80211 package/kernel/mac80211
+
     - name: Update Feeds
       id: update
       run: |
@@ -77,10 +78,11 @@ jobs:
         chmod +x ../scripts/*.sh
         ../scripts/hook-feeds.sh
     
-    - name: MOD index file
-      run: |
-         cd $OPENWRTROOT/package/lean/autocore/files/arm
-         sed -i '/Load Average/i\\t\t<tr><td width="33%"><%:Telegram %></td><td><a href="https://t.me/DHDAXCW"><%:电报交流群%></a></td></tr>' index.htm
+   # - name: MOD index file
+     # run: |
+       # cd $OPENWRTROOT/package/lean/autocore/files/arm
+       # sed -i '/Load Average/i\\t\t<tr><td width="33%"><%:Telegram %></td><td><a href="https://t.me/DHDAXCW"><%:电报交流群%></a></td></tr>' index.htm
+
     - name: Install Feeds
       run: |
         cd $OPENWRTROOT
