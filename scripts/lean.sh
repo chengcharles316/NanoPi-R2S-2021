@@ -19,7 +19,7 @@ git clone --depth=1 https://github.com/Lienol/openwrt-package
 git clone --depth=1 https://github.com/kiddin9/openwrt-bypass
 
 # Add luci-app-advanced
-git clone --depth=1 https://github.com/sirpdboy/luci-app-advanced
+#git clone --depth=1 https://github.com/sirpdboy/luci-app-advanced
 
 # Add luci-app-godproxy
 git clone --depth=1 https://github.com/project-lede/luci-app-godproxy
