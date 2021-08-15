@@ -22,7 +22,7 @@ env:
 jobs:
   Build:
     runs-on: ubuntu-20.04
-    if: github.repository == '/NanoPi-R2S-2021'
+    if: github.repository == 'chengcharles316/NanoPi-R2S-2021'
     outputs:
       OPENWRTROOT: ${{ steps.update.outputs.OPENWRTROOT }}
       PLATFORM: ${{ steps.compile.outputs.PLATFORM }}
