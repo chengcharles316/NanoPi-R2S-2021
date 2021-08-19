@@ -91,8 +91,8 @@ jobs:
         ../scripts/preset-terminal-tools.sh
 
     - name: SSH connection to Actions
-      uses: kiddin9/debugger-action@master
-      if: env.SSH_ACTIONS == 'ssh' || (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false')
+      uses: P3TERX/ssh2actions@v1.0.0
+      if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')    
       
     - name: Download Package
       id: package
