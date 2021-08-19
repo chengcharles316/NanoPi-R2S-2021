@@ -2,6 +2,11 @@ name: NanoPi R2S stable FusionWRT
 on:
   repository_dispatch:
   workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'  
  # schedule:
    # - cron: 0 16 * * *
   # watch:
@@ -84,7 +89,11 @@ jobs:
         ../$DIY_SH
         ../scripts/preset-clash-core.sh armv8
         ../scripts/preset-terminal-tools.sh
-        
+
+    - name: SSH connection to Actions
+      uses: kiddin9/debugger-action@master
+      if: env.SSH_ACTIONS == 'ssh' || (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false')
+      
     - name: Download Package
       id: package
       run: |
