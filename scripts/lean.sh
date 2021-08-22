@@ -22,7 +22,7 @@ git clone --depth=1 https://github.com/kiddin9/openwrt-bypass
 git clone --depth=1 https://github.com/sirpdboy/luci-app-advanced
 
 # Add luci-app-ipsec-vpnserver-manyusers
-svn co https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng/trunk/luci-app-ipsec-vpnserver-manyusers
+#svn co https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng/trunk/luci-app-ipsec-vpnserver-manyusers
 
 # Add luci-app-homeconnect
 svn co https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng/trunk/luci-app-homeconnect
