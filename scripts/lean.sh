@@ -21,6 +21,12 @@ git clone --depth=1 https://github.com/kiddin9/openwrt-bypass
 # Add luci-app-advanced
 git clone --depth=1 https://github.com/sirpdboy/luci-app-advanced
 
+# Add luci-app-ipsec-vpnserver-manyusers
+svn co https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng/trunk/luci-app-ipsec-vpnserver-manyusers
+
+# Add luci-app-homeconnect
+svn co https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng/trunk/luci-app-homeconnect
+
 # Add luci-app-godproxy
 git clone --depth=1 https://github.com/project-lede/luci-app-godproxy
 
@@ -65,8 +71,8 @@ git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 rm -rf ../lean/luci-theme-argon
 
-# Add luci-theme-infinityfreedom
-git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
+# Add luci-theme-ifit
+git clone --depth=1 https://github.com/kenzok8/luci-theme-ifit
 
 # Add luci-theme-netgear
 git clone --depth=1 https://github.com/i028/luci-theme-netgear
