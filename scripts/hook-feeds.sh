@@ -18,6 +18,12 @@ svn co https://github.com/281677160/openwrt-package/trunk/feeds/packages/net/net
 rm -rf ../package/lean/luci-app-netdata
 svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-netdata luci/applications/luci-app-netdata
 
+# Add luci-app-ocserv
+rm- rf packages/net/openconnect
+svn co https://github.com/openwrt/packages/trunk/net/openconnect packages/net/openconnect
+rm -rf luci/applications/luci-app-ocserv
+svn con https://github.com/openwrt/luci/trunk/applications/luci-app-ocserv luci/applications/luci-app-ocserv
+
 # Add tmate
 git clone --depth=1 https://github.com/immortalwrt/openwrt-tmate
 
