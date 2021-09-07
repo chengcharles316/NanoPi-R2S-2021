@@ -131,8 +131,10 @@ popd
 # Mod zzz-default-settings
 pushd package/lean/default-settings/files
 sed -i '/http/d' zzz-default-settings
-export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
-sed -i "s/${orig_version}/${orig_version} ($(date +"%Y.%m.%d"))/g" zzz-default-settings
+sed -i '/18.06/d' zzz-default-settings
+export orig_version=$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')
+export date_version=$(date -d "$(rdate -n -4 -p ntp.aliyun.com)" +'%Y-%m-%d')
+sed -i "s/${orig_version}/${orig_version} ${date_version}/g" zzz-default-settings
 popd
 
 # Fix libssh
@@ -164,6 +166,9 @@ pushd po2lmo
 make && sudo make install
 popd
 
+rm -rf ./package/kernel/linux/modules/video.mk
+wget -P package/kernel/linux/modules/ https://github.com/immortalwrt/immortalwrt/raw/master/package/kernel/linux/modules/video.mk
+
 # Change default shell to zsh
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
@@ -176,8 +181,12 @@ sed -i "s/OpenWrt /FusionWrt /g" package/lean/default-settings/files/zzz-default
 #sed -i 's/5.4/5.10/g' target/linux/rockchip/Makefile
 
 # Custom configs
-# git am $GITHUB_WORKSPACE/patches/lean/*.patch
+git am $GITHUB_WORKSPACE/patches/lean/*.patch
 echo -e " FusionWrt built on "$(date +%Y.%m.%d)"\n -----------------------------------------------------" >> package/base-files/files/etc/banner
+echo 'net.bridge.bridge-nf-call-iptables=0' >> package/base-files/files/etc/sysctl.conf
+echo 'net.bridge.bridge-nf-call-ip6tables=0' >> package/base-files/files/etc/sysctl.conf
+echo 'net.bridge.bridge-nf-call-arptables=0' >> package/base-files/files/etc/sysctl.conf
+echo 'net.bridge.bridge-nf-filter-vlan-tagged=0' >> package/base-files/files/etc/sysctl.conf
 
 # Add CUPInfo
 pushd package/lean/autocore/files/arm/sbin
